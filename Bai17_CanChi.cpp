@@ -6,15 +6,19 @@ using namespace std;
 int main()
 {
     int nam;
-    cout << "Nhap nam: "; cin >> nam;
+    cout << "Can Chi nam 2000 den 2024\n";
     int socan, sochi;
     string can[]{ "Canh ", "Tan ", "Nham ", "Quy ", "Giap ", "At ", "Binh ", "Dinh ", "Mau ", "Ky " };
     string chi[]{ "Than", "Dau", "Tuat", "Hoi", "Ty", "Suu", "Dan", "Mao", "Thin", "Ti", "Ngo", "Mui" };
-    socan = nam % 10;
-    sochi = nam % 12;
-    cout << "Nam nay la nam: ";
-    cout << can[socan];
-    cout << chi[sochi];
+
+
+    for (int nam = 2000; nam <= 2024; nam++)
+    {
+        socan = nam % 10;
+        sochi = nam % 12;
+        cout << "Nam " << nam << ": " << can[socan];
+        cout << chi[sochi] << "\n";
+    }
 
     return 0;
 }
